@@ -1,0 +1,11 @@
+.diagram__item-number-block {
+  width: calc(1136 / 1240 * 100%);
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}

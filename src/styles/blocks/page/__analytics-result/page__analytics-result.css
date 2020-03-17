@@ -1,0 +1,17 @@
+.page__analytics-result {
+  max-width: 1240px;
+  margin: auto;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .page__analytics-result {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page__analytics-result {
+    padding-bottom: 24px;
+  }
+}

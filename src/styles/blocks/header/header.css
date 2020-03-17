@@ -1,0 +1,26 @@
+@import url("./__about-link/header__about-link.css");
+@import url("./__container/header__container.css");
+@import url("./__home-link/header__home-link.css");
+@import url("./__home/header__home.css");
+@import url("./__logo/header__logo.css");
+@import url("./__navigation/header__navigation.css");
+@import url("./__about/header__about.css");
+@import url("./__home-link/_hover/header__home-link_hover.css");
+@import url("./__about-link/_hover/header__about-link_hover.css");
+.header {
+  height: 80px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #b6bcbf;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    height: 56px;
+  }
+}

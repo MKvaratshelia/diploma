@@ -1,0 +1,25 @@
+.history__github-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #1a1b22;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .history__github-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .history__github-link {
+    display: none;
+  }
+}

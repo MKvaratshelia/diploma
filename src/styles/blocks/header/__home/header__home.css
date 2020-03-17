@@ -1,0 +1,14 @@
+@import url("./_color/header__home_color.css");
+.header__home {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 34px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 425px) {
+  .header__home {
+    margin-right: 11px;
+  }
+}

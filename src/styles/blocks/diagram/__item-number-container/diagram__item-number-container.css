@@ -1,0 +1,7 @@
+.diagram__item-number-container {
+  display: flex;
+  align-items: center;
+  background-color: #2f71e5;
+
+  height: 24px;
+}

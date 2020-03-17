@@ -1,0 +1,9 @@
+.about-author__info {
+  max-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-author__info {
+    max-width: 424px;
+  }
+}

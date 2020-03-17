@@ -1,0 +1,21 @@
+.analytics-result__home {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  margin: 40px 0 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .analytics-result__home {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .analytics-result__home {
+    display: none;
+  }
+}

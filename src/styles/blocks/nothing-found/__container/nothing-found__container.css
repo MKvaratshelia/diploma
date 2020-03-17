@@ -1,0 +1,8 @@
+.nothing-found__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 356px;
+  margin: auto;
+  padding-bottom: 80px;
+}

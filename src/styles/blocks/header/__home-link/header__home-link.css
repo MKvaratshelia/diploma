@@ -1,0 +1,18 @@
+@import url("./_color/header__home-link_color_white.css");
+@import url("./_color/header__home-link_color_black.css");
+@import url("./_color/header__home-link_color_gray.css");
+.header__home-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 425px) {
+  .header__home-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,12 @@
+@import url("../vendor/fonts.css");
+@import url("../vendor/normalize.css");
+@import url("../styles/blocks/header/header.css");
+@import url("../styles/blocks/page/page.css");
+@import url("../styles/blocks/info/info.css");
+@import url("../styles/blocks/container/container.css");
+@import url("../styles/blocks/technology/technology.css");
+@import url("../styles/blocks/about-author/about-author.css");
+@import url("../styles/blocks/footer/footer.css");
+@import url("../styles/blocks/history/history.css");
+@import url("../styles/blocks/link/link.css");
+@import url("../styles/blocks/glide/glide.css");

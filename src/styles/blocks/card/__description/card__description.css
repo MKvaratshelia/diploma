@@ -1,0 +1,21 @@
+.card__description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  margin: 0 0 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .card__description {
+    height: 88px;
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,37 @@
+@import url("./__about-link/footer__about-link.css");
+@import url("./__copyright/footer__copyright.css");
+@import url("./__facebook-icon/footer__facebook-icon.css");
+@import url("./__github-icon/footer__github-icon.css");
+@import url("./__home-link/footer__home-link.css");
+@import url("./__links/footer__links.css");
+@import url("./__praktikum-link/footer__praktikum-link.css");
+@import url("./__social/footer__social.css");
+@import url("./__container/footer__container.css");
+
+.footer {
+  max-width: 1240px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+@media screen and (max-width: 1239px) {
+  .footer {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    align-items: normal;
+    height: 224px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    padding-top: 20px;
+  }
+}

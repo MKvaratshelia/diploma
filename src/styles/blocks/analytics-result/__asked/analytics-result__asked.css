@@ -1,0 +1,22 @@
+.analytics-result__asked {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .analytics-result__asked {
+    font-size: 32px;
+    line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .analytics-result__asked {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}

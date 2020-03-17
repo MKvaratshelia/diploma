@@ -1,0 +1,19 @@
+.diagram__items {
+  height: 538px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 425px) {
+  .diagram__items {
+    height: 328px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .diagram__items {
+    margin-top: 18px;
+  }
+}

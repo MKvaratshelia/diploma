@@ -1,0 +1,18 @@
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  width: 840px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__container {
+    max-width: 560px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__container {
+    height: 100%;
+    flex-direction: column;
+  }
+}

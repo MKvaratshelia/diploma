@@ -1,0 +1,12 @@
+.technology__items {
+  width: 568px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .technology__items {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,9 @@
+@import url("../vendor/fonts.css");
+@import url("../vendor/normalize.css");
+@import url("../styles/blocks/header/header.css");
+@import url("../styles/blocks/page/page.css");
+@import url("../styles/blocks/analytics-result/analytics-result.css");
+@import url("../styles/blocks/footer/footer.css");
+@import url("../styles/blocks/analytics-table/analytics-table.css");
+@import url("../styles/blocks/container/container.css");
+@import url("../styles/blocks/diagram/diagram.css");
