@@ -7,6 +7,7 @@
 @import url("./__about/header__about.css");
 @import url("./__home-link/_hover/header__home-link_hover.css");
 @import url("./__about-link/_hover/header__about-link_hover.css");
+@import url("./__list/header__list.css");
 .header {
   height: 80px;
   box-sizing: border-box;
