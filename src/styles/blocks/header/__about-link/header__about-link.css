@@ -1,0 +1,17 @@
+@import url("./_color/header__about-link_color_gray.css");
+@import url("./_color/header__about-link_color_black.css");
+.header__about-link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 425px) {
+  .header__about-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Kvaratshelia Mihail" content="Дипломный проект Kvaratskheliya Mihail на Яндекс Практикуме" />
+  <meta name="discription" content="Диплом" />
+  <link rel="favicon" href="../images/favicon.png" />
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>" />
+  <title>О проекте</title>
+</head>
+<div class="page">
+  <header class="header">
+    <div class="header__container">
+      <h2 class="header__logo ">NewsAnalyzer</h2>
+      <nav class="header__navigation">
+        <ul class="header__list">
+          <li class="header__home">
+            <a href="./index.html" class="header__home-link header__home-link_color_gray link ">Главная</a>
+          </li>
+          <li class="header__about header__about_color">
+            <a href="" class="header__about-link header__about-link_color_black">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="page__info info">
+    <div class="info__container">
+      <h2 class="info__title">Клиентам</h2>
+      <p class="info__description">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему
+        научился студент, и какими технологиями владеет.</p>
+      <p class="info__description">Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым.
+        Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в проектах, выполненных по другим
+        методологиям. Также сайт проще и дешевле поддерживать.</p>
+      <p class="info__description">Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт
+        продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+      <p class="info__description">При создании проекта была использона сборка технологией Webpack. Это современных
+        подход
+        к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также настроена сайт работает в старых
+        браузерах. Даже если посетители — пользователи старых операционных систем у них не будет проблем с отображением.
+        А
+        значит потенциальная аудитория возрастает.</p>
+      <p class="info__description">Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу нужен сайт, мы
+        рекомендуем обратиться к этому студенту.</p>
+    </div>
+  </section>
+  <section class="page__technology technology container">
+    <div class="technology__container">
+      <h2 class="technology__title">Используемые
+        технологии</h2>
+      <div class="technology__items">
+        <div class="technology__item">
+          <h4 class="technology__item-title">HTML</h4>
+          <img src="./images/HTML.svg" alt="лого HTML" class="technology__item-image">
+        </div>
+        <div class="technology__item">
+          <h4 class="technology__item-title">CSS</h4>
+          <img src="./images/css.svg" alt="лого CSS" class="technology__item-image">
+        </div>
+        <div class="technology__item">
+          <h4 class="technology__item-title">Java Script</h4>
+          <img src="./images/js.svg" alt="лого Java Script" class="technology__item-image">
+        </div>
+        <div class="technology__item">
+          <h4 class="technology__item-title">Webpack</h4>
+          <img src="./images/webpack.svg" alt="лого Webpack" class="technology__item-image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page__about-author about-author">
+    <div class="about-author__container">
+      <div class="about-author__photo"></div>
+      <div class="about-author__info">
+        <h2 class="about-author__title">Об авторе</h2>
+        <p class="about-author__description">Это блок с описаением автора проекта. Здесь следует указать, как вас
+          зовут, чем вы занимаетесь, какими технологиями разработки владете.
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.</p>
+      </div>
+    </div>
+  </section>
+  <section class="page__history history container">
+    <div class="history__container">
+      <div class="history__header">
+        <h2 class="history__title">История коммитов из GitHub</h2>
+        <a class="history__github-link" target="_blank" href="https://github.com/MKvaratshelia/diploma">Открыть в Github ></a>
+      </div>
+      <div class="history__slider slider">
+        <div class="slider__glide glide">
+          <div class="glide__track" data-glide-el="track">
+            <div class="glide__slides">
+              <!--сделать карточку в JS ----------------------------------------------------------- -->
+              <div class="glide__slide">
+                <div class="glide__slide-container">
+                  <p class="glide__slide-date">14 августа, 2019</p>
+                  <div class="glide__slide-wrapper">
+                    <div class="glide__slide-avatar"></div>
+                    <div>
+                      <h3 class="glide__slide-name">Антон Долинин</h3>
+                      <p class="glide__slide-mail">anton@yandex.ru</p>
+                    </div>
+                  </div>
+                  <p class="glide__slide-comment">Emmet (formerly Zen Coding) is a web-
+                    developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                </div>
+              </div>
+              <!-- ----------------------------------------------------------------------------------------- -->
+            </div>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#60;
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#62;</button>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="page__footer footer">
+    <div class="footer__container">
+      <p class="footer__copyright">
+        © 2020 Кварацхелия
+      </p>
+      <nav class="footer__links">
+        <ul class="footer__links-list">
+          <li>
+            <a href="./index.html" class="footer__home-link link"
+              >Главная</a
+            >
+          </li>
+          <li>
+            <a href="./about.html" class="footer__about-link link"
+              >О проекте</a
+            >
+          </li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://praktikum.yandex.ru/profile/frontend-developer/"
+              class="footer__praktikum-link link"
+              >Яндекс.Практикум</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__social">
+      <a target="_blank" href=""
+        ><img
+          src="./images/github-logo.svg"
+          alt="логотип GitHub"
+          class="footer__github-icon"
+      /></a>
+      <a target="_blank" href=""
+        ><img
+          src="./images/facebook-logo.svg"
+          alt="логотип Facebook"
+          class="footer__facebook-icon"
+      /></a>
+    </div>
+  </footer>
+</div>
+
+
+<script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+</body>
+
+</html>

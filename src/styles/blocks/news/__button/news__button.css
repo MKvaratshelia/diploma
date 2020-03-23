@@ -1,0 +1,19 @@
+.news__button {
+  display: block;
+  width: 288px;
+  height: 64px;
+  background-color: #fff;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  border-radius: 80px;
+  border: none;
+  cursor: pointer;
+}
+
+.news__button:hover {
+  background-color: #b6bcbf;
+}

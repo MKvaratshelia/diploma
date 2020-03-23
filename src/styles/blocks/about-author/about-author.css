@@ -1,0 +1,16 @@
+@import url("./__container/about-author__container.css");
+@import url("./__photo/about-author__photo.css");
+@import url("./__info/about-author__info.css");
+@import url("./__title/about-author__title.css");
+@import url("./__description//about-author__description.css");
+.about-author {
+  max-width: 1240px;
+  margin: auto;
+  color: #1a1b22;
+}
+
+@media screen and (max-width: 1239px) {
+  .about-author {
+    max-width: 90%;
+  }
+}

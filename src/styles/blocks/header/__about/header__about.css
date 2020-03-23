@@ -1,0 +1,7 @@
+@import url("./_color/header__about_color.css");
+.header__about {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}

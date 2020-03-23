@@ -1,0 +1,14 @@
+.glide__slide-container {
+  max-width: 352px;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .glide__slide-container {
+    max-width: 296px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .glide__slide-container {
+    max-width: 246px;
+  }
+}

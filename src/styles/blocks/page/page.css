@@ -1,0 +1,14 @@
+@import url("./__info/page__info.css");
+@import url("./__techology/page__technology.css");
+@import url("./__analytics-result/page__analytics-result.css");
+@import url("./__analytics-table/page__analytics-table.css");
+.page {
+  max-width: 1440px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  margin: auto;
+}

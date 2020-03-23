@@ -1,0 +1,7 @@
+@import url("./__container/nothing-found__container.css");
+@import url("./__title/nothing-found__title.css");
+@import url("./__description/nothing-found__description.css");
+@import url("./__image/nothing-found__image.css");
+.nothing-found {
+  display: none;
+}

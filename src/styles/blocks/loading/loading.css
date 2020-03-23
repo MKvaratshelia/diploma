@@ -1,0 +1,8 @@
+@import url("./__description/loading__description.css");
+@import url("./__preloader/loading__preloader.css");
+.loading {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

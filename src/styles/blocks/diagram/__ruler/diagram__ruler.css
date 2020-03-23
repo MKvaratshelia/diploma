@@ -1,0 +1,13 @@
+.diagram__ruler {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  max-width: 1136px;
+  margin-left: 104px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 320px) {
+  .diagram__ruler {
+    display: none;
+  }
+}

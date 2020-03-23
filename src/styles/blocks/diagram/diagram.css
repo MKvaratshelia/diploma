@@ -1,0 +1,14 @@
+@import url("./__items/diagram__items.css");
+@import url("./__item-number-container/diagram__item-number-container.css");
+@import url("./__item-day/diagram__item-day.css");
+@import url("./__item-number-block/diagram__item-number-block.css");
+@import url("./__item/diagram__item.css");
+@import url("./__ruler/diagram__ruler.css");
+@import url("./__ruler-item/diagram__ruler-item.css");
+@import url("./__date/diagram__date.css");
+@import url("./__info/diagram__info.css");
+
+.diagram {
+  padding-bottom: 116px;
+  box-sizing: border-box;
+}

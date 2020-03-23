@@ -1,0 +1,19 @@
+@import url("./__title/info__title.css");
+@import url("./__description/info__description.css");
+@import url("./__container/info__container.css");
+.info {
+  width: 100%;
+  margin-bottom: 94px;
+}
+
+@media screen and (max-width: 1239px) {
+  .info {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info {
+    margin-bottom: 50px;
+  }
+}

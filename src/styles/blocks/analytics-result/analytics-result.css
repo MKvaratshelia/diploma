@@ -1,0 +1,15 @@
+@import url("./__analytics/analytics-result__analytics.css");
+@import url("./__home/analytics-result__home.css");
+@import url("./__asked/analytics-result__asked.css");
+@import url("./__headers/analytics-result__headers.css");
+@import url("./__week/analytics-result__week.css");
+.analytics-result {
+  color: #000;
+  margin: auto;
+}
+
+@media screen and (max-width: 1239px) {
+  .analytics-result {
+    max-width: 90%;
+  }
+}

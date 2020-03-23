@@ -1,0 +1,21 @@
+.analytics-table__wrapper {
+  max-width: 1240px;
+  margin: auto;
+  padding-top: 80px;
+}
+
+@media screen and (max-width: 1239px) {
+  .analytics-table__wrapper {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .analytics-table__wrapper {
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .analytics-table__wrapper {
+    padding-top: 24px;
+  }
+}

@@ -1,0 +1,7 @@
+.technology__item {
+  height: 153px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

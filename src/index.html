@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Kvaratshelia Mihail"
+      content="Дипломный проект Kvaratskheliya Mihail на Яндекс Практикуме"
+    />
+    <meta name="discription" content="Диплом" />
+    <link rel="favicon" href="../images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
+    />
+    <title>NewsAnalyzer</title>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- секция поиск -->
+      <section class="page__search search">
+        <header class="header">
+          <div class="header__container">
+            <h2 class="header__logo header__logo_color_white">NewsAnalyzer</h2>
+            <nav class="header__navigation">
+              <ul class="header__list">
+                <li class="header__home header__home_color">
+                  <a
+                    href=""
+                    class="header__home-link header__home-link_color_white"
+                    >Главная</a
+                  >
+                </li>
+                <li class="header__about">
+                  <a
+                    href="./about.html"
+                    class="header__about-link header__about-link_color_gray link"
+                    >О проекте</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="search__container">
+          <h1 class="search__title">Что в мире творится?</h1>
+          <p class="search__subtitle">
+            Введите в поиске любую тему и узнайте, насколько популярной она была
+            в новостях за прошедшую неделю.
+          </p>
+          <form class="search__search-field search-field">
+            <input
+              type="text"
+              class="search-field__input"
+              required
+              placeholder="Введите тему новости"
+            />
+            <button type="submit" class="search-field__button">Искать</button>
+          </form>
+        </div>
+      </section>
+      <!-- Секция ничего не найдено -->
+      <section class="page__nothing-found nothing-found container">
+        <div class="nothing-found__container">
+          <img
+            src="./images/smile.svg"
+            alt="Грустный смайлик"
+            class="nothing-found__image"
+          />
+          <h3 class="nothing-found__title">
+            Ничего не найдено
+          </h3>
+          <p class="nothing-found__description">
+            К сожалению по вашему запросу ничего не найдено.
+          </p>
+        </div>
+      </section>
+      <!-- Секция загрузки -->
+      <section class="page__loading loading container">
+        <i class="loading__preloader"></i>
+        <p class="loading__description">Идет поиск новостей...</p>
+      </section>
+      <!-- секция с результатами поиска -->
+      <section class="page__news news container">
+        <div class="news__container">
+          <div class="news__header">
+            <h2 class="news__title">Результаты поиска</h2>
+            <a class="news__analitics" href="./analytics.html"
+              >Посмотреть аналитику ></a
+            >
+          </div>
+          <div class="news__cardlist">
+            <!-- скопировать код в js  для карточки -->
+            <!-- <template class="news__card card">
+            <div class="card__image"></div>
+            <div class="card__container">
+              <p class="card__date"></p>
+              <h3 class="card__title"></h3>
+              <p class="card__description"></p>
+              <p class="card__source"></p>
+            </div>
+          </template> -->
+            <!-- -------------------------------------------------------------- -->
+          </div>
+          <div class="news__button-container">
+            <button class="news__button">Показать еще</button>
+          </div>
+        </div>
+      </section>
+      <!-- Секция о авторе -->
+      <section class="page__about-author about-author">
+        <div class="about-author__container">
+          <div class="about-author__photo"></div>
+          <div class="about-author__info">
+            <h2 class="about-author__title">Об авторе</h2>
+            <p class="about-author__description">
+              Это блок с описаением автора проекта. Здесь следует указать, как
+              вас зовут, чем вы занимаетесь, какими технологиями разработки
+              владете. Также можно рассказать о процессе обучения в Практикуме,
+              чему вы тут научились, и чем можете помочь потенциальным
+              заказчикам.
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer class="page__footer footer">
+        <div class="footer__container">
+          <p class="footer__copyright">
+            © 2020 Кварацхелия
+          </p>
+          <nav class="footer__links">
+            <ul class="footer__links-list">
+              <li>
+                <a href="./index.html" class="footer__home-link link"
+                  >Главная</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="footer__about-link link"
+                  >О проекте</a
+                >
+              </li>
+
+              <li>
+                <a
+                  target="_blank"
+                  href="https://praktikum.yandex.ru/profile/frontend-developer/"
+                  class="footer__praktikum-link link"
+                  >Яндекс.Практикум</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__social">
+          <a target="_blank" href=""
+            ><img
+              src="./images/github-logo.svg"
+              alt="логотип GitHub"
+              class="footer__github-icon"
+          /></a>
+          <a target="_blank" href=""
+            ><img
+              src="./images/facebook-logo.svg"
+              alt="логотип Facebook"
+              class="footer__facebook-icon"
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  </body>
+</html>

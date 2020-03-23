@@ -1,0 +1,11 @@
+.news__container {
+  display: none;
+  max-width: 1240px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1239px) {
+  .news__container {
+    max-width: 90%;
+  }
+}
