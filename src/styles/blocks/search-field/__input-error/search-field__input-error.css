@@ -1,0 +1,11 @@
+.search-field__input-error {
+  display: none;
+  position: absolute;
+  color: red;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  bottom: 5px;
+  font-size: 12px;
+}
+/* .search-field__input-error:valid {
+  display: none;
+} */

@@ -1,5 +1,5 @@
 .news__container {
-  display: none;
+  display: block;
   max-width: 1240px;
   margin: auto;
 }

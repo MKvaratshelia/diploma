@@ -3,38 +3,70 @@ import "./images/favicon.png";
 import "./images/github-logo.svg";
 import "./images/facebook-logo.svg";
 import "./images/smile.svg";
+import {
+  form,
+  input,
+  notFound,
+  errorMesage,
+  newsBlock,
+  showMore,
+  cardList
+} from "./js/constants/constants";
+import NewsApi from "./js/modules/NewsApi";
+import { preloader, error } from "./js/utils/utils";
+import NewCard from "./js/components/NewCard";
+import NewsCardList from "./js/components/NewsCardList";
 
-// const key = cdf5e192105d4960853628cc8faf3bda;
-let dateOffset = 24 * 60 * 60 * 1000 * 6; //7 days
-let myDate = new Date();
-let ddate = new Date(dateOffset);
-console.log(ddate.getDate(dateOffset));
-let newDate = new Date(myDate.setTime(myDate.getTime() - dateOffset));
-let date = `${myDate.getFullYear(newDate)}-${myDate.getMonth(
-  newDate
-)}-${myDate.getDate(newDate)}`;
-console.log(date);
+// const errorInput = document.querySelector(".search-field__input-error");
+// input.addEventListener("input", function() {
+//   if (!input.validity.valid) {
+//     errorInput.textContent = "Ошибка";
+//   } else if (input.value === "") {
+//     errorInput.textContent = "";
+//   }
+// });
+// const newscontainer = document.querySelector(".news__container");
+// const notFound = document.querySelector(".nothing-found");
+const newCard = new NewCard();
+const newsapi = new NewsApi();
+const newsCardList = new NewsCardList(
+  newCard,
+  newsapi,
+  newsBlock,
+  notFound,
+  preloader,
+  form,
+  errorMesage,
+  showMore,
+  input,
+  cardList
+);
 
-const options = {
-  baseUrl: "http://newsapi.org/v2/everything",
-  apiKey: "cdf5e192105d4960853628cc8faf3bda"
-};
-
-// function newsApi(options) {
-//   fetch(this.options.baseUrl + "/вирус/", {
-
-//   })
-//     .then(result => {
-//       if (result.ok) {
-//         return result.json();
+// function data() {
+//   form.addEventListener("submit", function(event) {
+//     event.preventDefault();
+//     preloader(true);
+//     newsapi.getNews(preloader, input).then(res => {
+//       // localStorage.setItem("result", JSON.stringify(res));
+//       // let strData = localStorage.getItem("result");
+//       // let data = JSON.parse(strData);
+//       if (res.articles.length == 0) {
+//         notFound.style = "display: flex";
+//         newscontainer.style = "display: none";
+//       } else {
+//         notFound.style = "display: none";
+//         newscontainer.style = "display: block";
+//         for (let el of res.articles) {
+//           newCard.create(el);
+//         }
 //       }
-//       return Promise.reject(`Ошибка: ${result.status}`);
-//     })
-//     .then(result => {
-//       return result;
-//     })
-//     .catch(err => {
-//       console.log(err);
 //     });
+//   });
 // }
-// newsApi();
+
+// function getWeekDay(date) {
+//   let days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+//   return days[date.getDay()];
+// }
+// let date = new Date("2020-03-26T14:36:00Z");
+// console.log(getWeekDay(date), date.getDate());

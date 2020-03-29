@@ -12,6 +12,8 @@
   border-radius: 80px;
   border: none;
   cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #b6bcbf;
+  transition: 0.5s;
 }
 
 .news__button:hover {

@@ -49,13 +49,23 @@
             Введите в поиске любую тему и узнайте, насколько популярной она была
             в новостях за прошедшую неделю.
           </p>
-          <form class="search__search-field search-field">
-            <input
-              type="text"
-              class="search-field__input"
-              required
-              placeholder="Введите тему новости"
-            />
+          <form
+            name="searchForm"
+            class="search__search-field search-field"
+            novalidate
+          >
+            <div class="search-field__input-container">
+              <input
+                name="searchInput"
+                type="text"
+                class="search-field__input"
+                required
+                placeholder="Введите тему новости"
+                pattern="[а-яА-яЁё]*"
+              />
+              <span class="search-field__input-error"></span>
+            </div>
+
             <button type="submit" class="search-field__button">Искать</button>
           </form>
         </div>
@@ -92,15 +102,17 @@
           </div>
           <div class="news__cardlist">
             <!-- скопировать код в js  для карточки -->
-            <!-- <template class="news__card card">
-            <div class="card__image"></div>
-            <div class="card__container">
-              <p class="card__date"></p>
-              <h3 class="card__title"></h3>
-              <p class="card__description"></p>
-              <p class="card__source"></p>
-            </div>
-          </template> -->
+            <!-- <a href="" class="news__card card" target="_blank">
+              <div class="">
+                <div class="card__image"></div>
+                <div class="card__container">
+                  <p class="card__date"></p>
+                  <h3 class="card__title"></h3>
+                  <p class="card__description"></p>
+                  <p class="card__source"></p>
+                </div>
+              </div>
+            </a> -->
             <!-- -------------------------------------------------------------- -->
           </div>
           <div class="news__button-container">

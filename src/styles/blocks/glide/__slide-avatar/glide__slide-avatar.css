@@ -1,8 +1,14 @@
 .glide__slide-avatar {
   width: 64px;
   height: 64px;
-  background-image: url("../../../../images/image-03.png");
+  /* background-image: url("../../../../images/image-03.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 16px;
+}
+@media screen and (max-width: 320px) {
+  .glide__slide-avatar {
+    width: 46px;
+    height: 46px;
+  }
 }
