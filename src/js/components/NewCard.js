@@ -4,7 +4,6 @@ export default class NewCard {
     // this.container = container;
   }
   create(data) {
-    // const container = document.querySelector(".news__cardlist");
     const date = new Date(`${data.publishedAt}`);
     const dateFormat = date.toLocaleString("ru", {
       year: "numeric",
@@ -13,7 +12,11 @@ export default class NewCard {
     });
     const card = document.createElement("a");
     card.classList.add("card");
-    card.innerHTML = `<div class="">
+    card.setAttribute("href", `${data.url}`);
+    card.setAttribute("target", "_blank");
+    card.insertAdjacentHTML(
+      "beforeend",
+      `<div class="">
     <div class="card__image"></div>
     <div class="card__container">
       <p class="card__date"></p>
@@ -21,9 +24,9 @@ export default class NewCard {
       <p class="card__description"></p>
       <p class="card__source"></p>
     </div>
-  </div>`;
-    card.setAttribute("href", `${data.url}`);
-    card.setAttribute("target", "_blank");
+  </div>`
+    );
+
     card.querySelector(
       ".card__image"
     ).style.backgroundImage = `url(${data.urlToImage})`;

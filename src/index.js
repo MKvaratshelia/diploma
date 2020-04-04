@@ -10,13 +10,17 @@ import {
   errorMesage,
   newsBlock,
   showMore,
-  cardList
+  cardList,
+  sevenDays,
+  errorServer,
+  searchButton
 } from "./js/constants/constants";
 import NewsApi from "./js/modules/NewsApi";
 import { preloader, error } from "./js/utils/utils";
+import DataStorage from "./js/modules/DataStorage";
 import NewCard from "./js/components/NewCard";
 import NewsCardList from "./js/components/NewsCardList";
-
+// import sevenDays from "./js/constants/constants";
 // const errorInput = document.querySelector(".search-field__input-error");
 // input.addEventListener("input", function() {
 //   if (!input.validity.valid) {
@@ -28,7 +32,8 @@ import NewsCardList from "./js/components/NewsCardList";
 // const newscontainer = document.querySelector(".news__container");
 // const notFound = document.querySelector(".nothing-found");
 const newCard = new NewCard();
-const newsapi = new NewsApi();
+const newsapi = new NewsApi(sevenDays);
+const dataStorage = new DataStorage();
 const newsCardList = new NewsCardList(
   newCard,
   newsapi,
@@ -39,8 +44,12 @@ const newsCardList = new NewsCardList(
   errorMesage,
   showMore,
   input,
-  cardList
+  cardList,
+  errorServer,
+  dataStorage,
+  searchButton
 );
+// проверка поля ввода при загрузке страницы
 
 // function data() {
 //   form.addEventListener("submit", function(event) {

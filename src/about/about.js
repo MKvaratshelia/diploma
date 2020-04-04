@@ -12,8 +12,14 @@ import { slider } from "../js/components/slider.js";
 import CommitCardList from "../js/components/CommitCardList";
 import { container, historyBlock } from "../js/constants/constants";
 const gitApi = new GitApi(gitUrl, historyBlock);
-const commitcard = new CommitCard(container);
-const commitCardList = new CommitCardList(gitApi, commitcard, slider);
+const commitcard = new CommitCard();
+const commitCardList = new CommitCardList(
+  gitApi,
+  commitcard,
+  slider,
+  historyBlock,
+  container
+);
 commitCardList.render();
 // gitApi.getCommits().then(res => {
 //   console.log(res);

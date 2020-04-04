@@ -1,5 +1,5 @@
 .search-field__input-error {
-  display: none;
+  display: block;
   position: absolute;
   color: red;
   font-family: Roboto, Arial, Helvetica, sans-serif;

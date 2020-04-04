@@ -1,9 +1,11 @@
 export default class NewsApi {
-  constructor() {}
+  constructor(sevenDays) {
+    this.sevenDays = sevenDays;
+  }
   getNews(input, preloader) {
     const dateNow = new Date();
-    const sevenDays = 7 * 24 * 3600 * 1000;
-    const weekAgo = new Date(dateNow - sevenDays);
+    // const sevenDays = 7 * 24 * 3600 * 1000;
+    const weekAgo = new Date(dateNow - this.sevenDays);
     const dateTo = `${dateNow.getFullYear()}-${dateNow.getMonth() +
       1}-${dateNow.getDate()}`;
     const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() +
@@ -17,22 +19,22 @@ export default class NewsApi {
         "sortBy=popularity&" +
         "apiKey=cdf5e192105d4960853628cc8faf3bda" +
         "&language=ru"
-    )
-      .then(res => {
-        if (res.ok) {
-          // console.log(res.json());
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .then(res => {
-        return res;
-      })
-      .catch(err => {
-        console.log(err);
-      })
-      .finally(() => {
-        preloader(false);
-      });
+    );
+    // .then(res => {
+    //   if (res.ok) {
+    //     // console.log(res.json());
+    //     return res.json();
+    //   }
+    //   return Promise.reject(`Ошибка: ${res.status}`);
+    // })
+    // .then(res => {
+    //   return res;
+    // })
+    // .catch(err => {
+    //   console.log(err);
+    // })
+    // .finally(() => {
+    //   preloader(false);
+    // });
   }
 }
