@@ -49,14 +49,25 @@
             Введите в поиске любую тему и узнайте, насколько популярной она была
             в новостях за прошедшую неделю.
           </p>
-          <form class="search__search-field search-field">
-            <input
-              type="text"
-              class="search-field__input"
-              required
-              placeholder="Введите тему новости"
-            />
-            <button type="submit" class="search-field__button">Искать</button>
+          <form
+            name="searchForm"
+            class="search__search-field search-field"
+            novalidate
+          >
+            <div class="search-field__input-container">
+              <input
+                name="searchInput"
+                type="text"
+                class="search-field__input"
+                required
+                placeholder="Введите тему новости"
+              />
+              <span class="search-field__input-error"></span>
+            </div>
+
+            <button type="submit" disabled class="search-field__button">
+              Искать
+            </button>
           </form>
         </div>
       </section>
@@ -81,26 +92,35 @@
         <i class="loading__preloader"></i>
         <p class="loading__description">Идет поиск новостей...</p>
       </section>
+      <!-- Секция ошибки сервера -->
+      <section class="page__error-server error-server container">
+        <p class="error-server__error-message">
+          Во время запроса произошла ошибка. Возможно, проблема с соединением
+          или сервер недоступен. Подождите немного и попробуйте ещё раз
+        </p>
+      </section>
       <!-- секция с результатами поиска -->
       <section class="page__news news container">
         <div class="news__container">
           <div class="news__header">
             <h2 class="news__title">Результаты поиска</h2>
-            <a class="news__analitics" href="./analytics.html"
+            <a class="news__analitics" target="_blank" href="./analytics.html"
               >Посмотреть аналитику ></a
             >
           </div>
           <div class="news__cardlist">
             <!-- скопировать код в js  для карточки -->
-            <!-- <template class="news__card card">
-            <div class="card__image"></div>
-            <div class="card__container">
-              <p class="card__date"></p>
-              <h3 class="card__title"></h3>
-              <p class="card__description"></p>
-              <p class="card__source"></p>
-            </div>
-          </template> -->
+            <!-- <a href="" class="news__card card" target="_blank">
+              <div class="">
+                <div class="card__image"></div>
+                <div class="card__container">
+                  <p class="card__date"></p>
+                  <h3 class="card__title"></h3>
+                  <p class="card__description"></p>
+                  <p class="card__source"></p>
+                </div>
+              </div>
+            </a> -->
             <!-- -------------------------------------------------------------- -->
           </div>
           <div class="news__button-container">

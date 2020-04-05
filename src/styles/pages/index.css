@@ -12,6 +12,7 @@
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/nothing-found/nothing-found.css");
 @import url("../blocks/loading/loading.css");
+@import url("../blocks/error-server/error-server.css");
 /* .page {
   max-width: 1440px;
   box-sizing: border-box;

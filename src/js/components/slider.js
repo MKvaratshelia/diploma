@@ -19,6 +19,6 @@ let slider = new Glide(".glide", {
       peek: { before: 0, after: 0 }
     }
   }
-}).mount();
+});
 
 export { slider };

@@ -6,5 +6,5 @@
 @import url("./__button/news__button.css");
 @import url("./__button-container/news__button-container.css");
 .news {
-  display: block;
+  display: none;
 }

@@ -6,16 +6,22 @@
   line-height: 22px;
   color: #1a1b22;
   margin: 0 0 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
   .card__description {
-    height: 88px;
-    /* overflow: hidden;
-    text-overflow: ellipsis; */
+    /* height: 88px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     overflow: hidden;
   }
 }
