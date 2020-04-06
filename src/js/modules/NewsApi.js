@@ -6,10 +6,12 @@ export default class NewsApi {
     const dateNow = new Date();
     // const sevenDays = 7 * 24 * 3600 * 1000;
     const weekAgo = new Date(dateNow - this.sevenDays);
-    const dateTo = `${dateNow.getFullYear()}-${dateNow.getMonth() +
-      1}-${dateNow.getDate()}`;
-    const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() +
-      1}-${weekAgo.getDate()}`;
+    const dateTo = `${dateNow.getFullYear()}-${
+      dateNow.getMonth() + 1
+    }-${dateNow.getDate()}`;
+    const dateFrom = `${weekAgo.getFullYear()}-${
+      weekAgo.getMonth() + 1
+    }-${weekAgo.getDate()}`;
     return fetch(
       "http://newsapi.org/v2/everything?" +
         `q=${input.value}&` +
@@ -19,7 +21,13 @@ export default class NewsApi {
         "sortBy=popularity&" +
         "apiKey=cdf5e192105d4960853628cc8faf3bda" +
         "&language=ru"
-    );
+    ).then((res) => {
+      if (res.ok) {
+        // console.log(res.json());
+        return res.json();
+      }
+      return Promise.reject(`Ошибка: ${res.status}`);
+    });
     // .then(res => {
     //   if (res.ok) {
     //     // console.log(res.json());

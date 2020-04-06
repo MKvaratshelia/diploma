@@ -13,7 +13,8 @@ import {
   cardList,
   sevenDays,
   errorServer,
-  searchButton
+  searchButton,
+  preloaderBlock,
 } from "./js/constants/constants";
 import NewsApi from "./js/modules/NewsApi";
 import { preloader, error } from "./js/utils/utils";
@@ -47,7 +48,8 @@ const newsCardList = new NewsCardList(
   cardList,
   errorServer,
   dataStorage,
-  searchButton
+  searchButton,
+  preloaderBlock
 );
 // проверка поля ввода при загрузке страницы
 

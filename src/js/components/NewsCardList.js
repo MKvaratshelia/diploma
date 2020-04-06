@@ -14,7 +14,8 @@ export default class NewsCardList {
     cardList,
     errorServer,
     dataStorage,
-    searchButton
+    searchButton,
+    preloaderBlock
   ) {
     this._card = card;
     this._newsApi = newsApi;
@@ -31,6 +32,7 @@ export default class NewsCardList {
     this._errorServer = errorServer;
     this._dataStorage = dataStorage;
     this._searchButton = searchButton;
+    this._preloaderBlock = preloaderBlock;
 
     this._form.addEventListener("submit", (event) => this._search(event));
     this._showMore.addEventListener("click", (event) => this._cardsRender());
@@ -45,7 +47,9 @@ export default class NewsCardList {
       this._curentPost += 1;
     }
     this._cardList.appendChild(container);
-    let elementCount = this._cardList.childElementCount;
+    const elementCount = this._cardList.childElementCount;
+    // const card = document.querySelectorAll(".card");
+    console.log(elementCount);
     if (elementCount === this._news.length) {
       this._showMore.style = "display: none";
     }
@@ -68,6 +72,8 @@ export default class NewsCardList {
   _search(event) {
     event.preventDefault();
     this._inputValidate();
+    this._inputNews.removeAttribute("disabled");
+    this._searchButton.removeAttribute("disabled");
     const input = this._inputNews.value;
     this._showMore.style = "display: block";
     // отчистим контейнер карточек, от карточек с прошлым запросом
@@ -85,34 +91,13 @@ export default class NewsCardList {
       this._nothingFound.style = "display: none";
     }
     this._errorServer.style = "display: none";
-    this._preloader(true);
-    // this.newsApi.getNews(this.inputNews, this.preloader).then(res => {
-    //   console.log(res);
-    //   if (res.articles.length === 0) {
-    //     this.nothingFound.style = "display: flex";
-    //     this.newsBlock.style = "display: none";
-    //   } else {
-    //     this.nothingFound.style = "display: none";
-    //   }
-    //   if (res.articles.length > 0) {
-    //     this.newsBlock.style = "display: block";
-    //   }
-
-    //   this.news = res.articles;
-    //   this.cardsRender();
-    // });
+    this._preloader(true, this._preloaderBlock);
+    this._inputNews.setAttribute("disabled", "disabled");
+    this._searchButton.setAttribute("disabled", "disabled");
     this._newsApi
       .getNews(this._inputNews)
       .then((res) => {
-        if (res.ok) {
-          // console.log(res.json());
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .then((res) => {
         this._dataStorage.localStorage(res, this._inputNews.value);
-        console.log(res);
         if (res.articles.length === 0) {
           this._nothingFound.style = "display: flex";
           this._newsBlock.style = "display: none";
@@ -123,7 +108,6 @@ export default class NewsCardList {
           this._newsBlock.style = "display: block";
         }
         this._news = res.articles;
-        console.log(this._news.length);
         this._cardsRender();
       })
       .catch((err) => {
@@ -131,7 +115,9 @@ export default class NewsCardList {
         this.errorServer.style = "display: block";
       })
       .finally(() => {
-        this._preloader(false);
+        this._preloader(false, this._preloaderBlock);
+        this._inputNews.removeAttribute("disabled");
+        this._searchButton.removeAttribute("disabled");
       });
   }
 }

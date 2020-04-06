@@ -8,7 +8,7 @@ export default class NewCard {
     const dateFormat = date.toLocaleString("ru", {
       year: "numeric",
       month: "long",
-      day: "numeric"
+      day: "numeric",
     });
     const card = document.createElement("a");
     card.classList.add("card");

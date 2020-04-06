@@ -1,14 +1,14 @@
-function preloader(isLoading) {
-  const preloader = document.querySelector(".loading");
+function preloader(isLoading, preloaderBlock) {
+  // const preloader = document.querySelector(".loading");
   if (isLoading) {
-    preloader.style = "display: flex";
+    preloaderBlock.style = "display: flex";
   } else if (!isLoading) {
-    preloader.style = "display: none";
+    preloaderBlock.style = "display: none";
   }
 }
 
-function error() {
-  const notfound = document.querySelector(".nothing-found");
-  notfound.style = "display: flex";
+function error(notfoundBlock) {
+  // const notfound = document.querySelector(".nothing-found");
+  notfoundBlock.style = "display: flex";
 }
 export { preloader, error };

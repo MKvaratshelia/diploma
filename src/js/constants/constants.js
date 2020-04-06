@@ -26,6 +26,8 @@ const showMore = document.querySelector(".news__button");
 const sevenDays = 6 * 24 * 3600 * 1000;
 const errorServer = document.querySelector(".error-server");
 const searchButton = document.querySelector(".search-field__button");
+const preloaderBlock = document.querySelector(".loading");
+
 export {
   form,
   input,
@@ -37,6 +39,7 @@ export {
   sevenDays,
   errorServer,
   searchButton,
+  preloaderBlock,
 };
 const analiticsRequest = document.querySelector(".analytics-result__request");
 const weeklyNews = document.querySelector(".analytics-result__week-number");
