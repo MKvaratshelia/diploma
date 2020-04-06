@@ -13,7 +13,7 @@ export default class NewsApi {
       weekAgo.getMonth() + 1
     }-${weekAgo.getDate()}`;
     return fetch(
-      "http://newsapi.org/v2/everything?" +
+      "https://newsapi.org/v2/everything?" +
         `q=${input.value}&` +
         `from=${dateFrom}&` +
         `to=${dateTo}&` +
