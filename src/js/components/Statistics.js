@@ -34,6 +34,7 @@ export default class Statistics {
       const weekDay = date.toLocaleString("ru", {
         weekday: "short",
       });
+      // проверка содержит ли обьект указанное свойство
       if (this._obj.hasOwnProperty(`${day},${weekDay}`)) {
         this._obj[`${day},${weekDay}`] += 1;
       } else {

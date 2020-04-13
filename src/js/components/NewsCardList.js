@@ -39,6 +39,7 @@ export default class NewsCardList {
     this._inputNews.addEventListener("input", (event) => this._inputValidate());
   }
   _cardsRender() {
+    // создаю пустой обьект и храню в нем карточки
     const container = document.createDocumentFragment();
     const newsNumber = this._news.length - this._curentPost;
     const cardsNumbers = newsNumber < 3 ? newsNumber : 3;
@@ -47,6 +48,7 @@ export default class NewsCardList {
       this._curentPost += 1;
     }
     this._cardList.appendChild(container);
+    // кооличество карточек в родителельском блоке
     const elementCount = this._cardList.childElementCount;
     // const card = document.querySelectorAll(".card");
     console.log(elementCount);
