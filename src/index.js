@@ -33,7 +33,7 @@ import NewsCardList from "./js/components/NewsCardList";
 // const newscontainer = document.querySelector(".news__container");
 // const notFound = document.querySelector(".nothing-found");
 const newCard = new NewCard();
-const newsapi = new NewsApi(sevenDays);
+const newsapi = new NewsApi(sevenDays, errorServer);
 const dataStorage = new DataStorage();
 const newsCardList = new NewsCardList(
   newCard,

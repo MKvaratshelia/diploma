@@ -1,6 +1,9 @@
+import { error } from "../utils/utils";
+
 export default class NewsApi {
-  constructor(sevenDays) {
+  constructor(sevenDays, error) {
     this.sevenDays = sevenDays;
+    this.error = error;
   }
   getNews(input, preloader) {
     const dateNow = new Date();
@@ -26,6 +29,7 @@ export default class NewsApi {
         // console.log(res.json());
         return res.json();
       }
+      this.error.style.display = "block";
       return Promise.reject(`Ошибка: ${res.status}`);
     });
     // .then(res => {

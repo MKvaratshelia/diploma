@@ -9,7 +9,7 @@ export default class CommitCardList {
   render() {
     this.gitApi
       .getCommits()
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           // console.log(res.json());
           this.historyBlock.style = "display: block";
@@ -17,14 +17,14 @@ export default class CommitCardList {
         }
         Promise.reject(`Ошибка: ${res.status}`);
       })
-      .then(res => {
+      .then((res) => {
         const lastTwentyCommits = res.slice(-20);
         for (let items of lastTwentyCommits) {
           this.container.appendChild(this.commitCard.create(items));
         }
         this.slider.mount();
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
         this.historyBlock.style = "display: none";
       });
