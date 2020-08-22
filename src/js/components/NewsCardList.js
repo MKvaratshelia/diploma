@@ -114,7 +114,7 @@ export default class NewsCardList {
       })
       .catch((err) => {
         console.log(err);
-        this.errorServer.style = "display: block";
+        this._errorServer.style = "display: block";
       })
       .finally(() => {
         this._preloader(false, this._preloaderBlock);
